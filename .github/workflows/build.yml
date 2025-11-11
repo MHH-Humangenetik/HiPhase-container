@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Push Docker Image
     strategy:
+      max-parallel: 1
       matrix:
         target: [slim, nextflow]
     steps:
